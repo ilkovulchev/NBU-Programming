@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Калориен калкулатор</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="shortcut icon" href="../content/apple.ico">
+    <link rel="stylesheet" href="calculator.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  </head>
+  <body>
+    <!-- TODO: Finish calculator for women -->
+    <div id="top" class="content">
+      <header>
+        Калкулатор за изчисляване на калориите според формулата на Харис Бенедикт
+      </header>
+      <div ng-app="calculator" class="calculators">
+        <div class="c">
+          <div class="formula">
+            <h3>Формула на Харис Бенедикт за мъже:</h3>
+            <p>БНМ = 66 + (13,7 x теглото ви в килограми) + (5 x височината ви в сантиметри) – (6,8 x възрастта ви в години)</p>
+          </div>
+          <form name="menForm" ng-controller="menCtrl" class="form">
+            <h2>Калориен калкулатор - Мъже</h2>
+            <h5>Полетата означени с <span class="error">*</span> са задължителни, за да получите точните калории!</h5>
+
+            <div class="inputs">
+              <input type="number" name="weightinput" ng-model="menWeight" class="calulator_input" placeholder="Теглото Ви в килограми" required>
+              <span class="error" ng-show="menForm.weightinput.$error.required">*</span>
+              <p class="error" ng-show="menForm.weightinput.$error.number">
+                Неправилно въведени килограми!</p>
+
+              <input type="number" name="heightinput" ng-model="menHeight" class="calulator_input" placeholder="Височината Ви в сантиметри" required>
+              <span class="error" ng-show="menForm.heightinput.$error.required">*</span>
+              <p class="error" ng-show="menForm.heightinput.$error.number">
+                Неправилно въведена височина!</p>
+
+              <input type="number" name="ageinput" ng-change="instantiateSS()" ng-model="menAge" class="calulator_input" placeholder="Възрастта Ви в години" required>
+              <span class="error" ng-show="menForm.ageinput.$error.required">*</span>
+              <p class="error" ng-show="menForm.ageinput.$error.number">
+                Неправилно въведени години!</p>
+
+              <p class="calulator_input">Изберете вашият индекс на активност. За повече информация относно индекс стойностите, натиснете <a href="#indexinfo">тук</a></p>
+              <select name="indexselect" class="calulator_input" ng-model="indexType" ng-options="index as index.label for index in indexes" required>
+              </select>
+              <span class="error" ng-show="menForm.indexselect.$error.required">*</span>
+              <input class="calulator_input_disabled" placeholder="Вашето BMI" ng-value='"Вашето BMI е: " + menBMI()' disabled>
+              <input class="calulator_input_disabled" placeholder="Резултат" ng-value='"Вашите дневни калории са: " + (menBMI() * indexType.value).toFixed(0)' disabled>
+              </div>
+            </form>
+        </div>
+        <div class="c">
+          <div class="formula">
+            <h3>Формула на Харис Бенедикт за жени:</h3>
+            <p>БНМ = 655 + (9,6 x теглото ви в килограми) + (1,8 x височината ви в сантиметри) – (4,7 x възрастта ви в години)</p>
+          </div>
+          <form name="womenForm" ng-controller="womenCtrl" class="form">
+            <h2>Калориен калкулатор - Жени</h2>
+            <h5>Полетата означени с <span class="error">*</span> са задължителни, за да получите точните калории!</h5>
+
+            <div class="inputs">
+              <input type="number" name="wweightinput" ng-model="womenWeight" class="calulator_input" placeholder="Теглото Ви в килограми" required>
+              <span class="error" ng-show="womenForm.wweightinput.$error.required">*</span>
+              <p class="error" ng-show="womenForm.wweightinput.$error.number">
+                Неправилно въведени килограми!</p>
+
+              <input type="number" name="wheightinput" ng-model="womenHeight" class="calulator_input" placeholder="Височината Ви в сантиметри" required>
+              <span class="error" ng-show="womenForm.wheightinput.$error.required">*</span>
+              <p class="error" ng-show="womenForm.wheightinput.$error.number">
+                Неправилно въведена височина!</p>
+
+              <input type="number" name="wageinput" ng-change="instantiateSFF()" ng-model="womenAge" class="calulator_input" placeholder="Възрастта Ви в години" required>
+              <span class="error" ng-show="womenForm.wageinput.$error.required">*</span>
+              <p class="error" ng-show="womenForm.wageinput.$error.number">
+                Неправилно въведени години!</p>
+
+              <p class="calulator_input">Изберете вашият индекс на активност. За повече информация относно индекс стойностите, натиснете <a href="#indexinfo">тук</a></p>
+              <select name="windexselect" class="calulator_input" ng-model="indexType" ng-options="index as index.label for index in indexes" required>
+              </select>
+              <span class="error" ng-show="womenForm.windexselect.$error.required">*</span>
+              <input class="calulator_input_disabled" placeholder="Вашето BMI" ng-value='"Вашето BMI е: " + womenBMI()' disabled>
+              <input class="calulator_input_disabled" placeholder="Резултат" ng-value='"Вашите дневни калории са: " + (womenBMI() * indexType.value).toFixed(0)' disabled>
+             </div>
+            </form>
+        </div>
+      </div>
+      <ul>
+        <li>BMI – базовото ниво на метамолизма (БНМ)</li>
+      </ul>
+      <div id="indexinfo" class="index_info">
+        <h3>Индекси за активност:</h3>
+        <ul>
+          <li>Индекс 1: Заседнал начин на живот (живот и ежедневие с малко движение или тренировки): БНМ се умножава по индекс 1,2;</li>
+          <li>Индекс 2: Слабо активен начин на живот (живот и ежедневие с леки, тонизиращи тренировки и занимания, 1 до 3 пъти седмично): БНМ се умножава по индекс 1,375;</li>
+          <li>Индекс 3: Умерено активен начин на живот (живот и ежедневие с умерено тежки, редовни ди 3-5 пъти седмично физически занимания): БНМ се умножава по индекс 1,55;</li>
+          <li>Индекс 4: Много активен начин на живот (живот и ежедневие със тренировки до 6-7 пъти седмично): БНМ се умножава по индекс 1,725;</li>
+        </ul>
+      </div>
+      <a target="_blank" href="http://calorienbalans.com/FoodInfo.aspx">
+        <p>Веднага вижте и калорийната стойност на храните за да си визуализирате сами храните, количествата и порциите храна за деня.</p>
+      </a>
+      <a id="goto" href="#top">Go To Top</a>
+    </div>
+    <script>
+      var app = angular.module('calculator', []);
+      app.controller('menCtrl', function($scope) {
+
+        $scope.menWeight = "";
+        $scope.menHeight = "";
+        $scope.menAge = "";
+        $scope.menIndex = "";
+        $scope.sixthysix = "";
+
+        $scope.instantiateSS = function() {
+          $scope.sixthysix = 66;
+        };
+        $scope.menBMI = function() {
+          $scope.result = $scope.sixthysix + (13.7 * $scope.menWeight*1) + (5 * $scope.menHeight*1) - (6.8 * $scope.menAge*1);
+          return $scope.result.toFixed(1);
+        };
+
+
+        $scope.indexes = [{
+          value: 1.2,
+          label: "Индекс 1 (1.2)"
+        }, {
+          value: 1.375,
+          label: 'Индекс 2 (1.375)'
+        }, {
+          value: 1.55,
+          label: 'Индекс 3 (1.55)'
+        }, {
+          value: 1.725,
+          label: 'Индекс 4 (1.725)'
+        }];
+    });
+
+    //Womens controller
+
+    app.controller('womenCtrl', function($scope) {
+
+      $scope.womenWeight = "";
+      $scope.womenHeight = "";
+      $scope.womenAge = "";
+      $scope.womenIndex = "";
+      $scope.sff = "";
+
+      $scope.instantiateSFF = function() {
+        $scope.sff = 655;
+      };
+      $scope.womenBMI = function() {
+        $scope.result = $scope.sff + (9.6 * $scope.womenWeight*1) + (1.8 * $scope.womenHeight*1) - (4.7 * $scope.womenAge*1);
+        return $scope.result.toFixed(1);
+      };
+
+
+      $scope.indexes = [{
+        value: 1.2,
+        label: "Индекс 1 (1.2)"
+      }, {
+        value: 1.375,
+        label: 'Индекс 2 (1.375)'
+      }, {
+        value: 1.55,
+        label: 'Индекс 3 (1.55)'
+      }, {
+        value: 1.725,
+        label: 'Индекс 4 (1.725)'
+      }];
+  });
+</script>
+  </body>
+</html>

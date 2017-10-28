@@ -1,0 +1,113 @@
+body {
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+	background-image: url("../content/test2.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+  padding-top: 10px;
+  color: #000333;
+}
+a {
+text-decoration: none;
+}
+#goto {
+  float: right;
+}
+a:hover {
+  cursor: pointer;
+}
+.content {
+  width: auto;
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  /*background: #ffffff;*/
+}
+header {
+  color: #000333;
+  font-size: 25px;
+  width: auto;
+  max-width: 950px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.calculators {
+  /*background: #ffffff;*/
+  height: auto;
+  margin: 0 auto;
+  padding: 10px;
+}
+.c, .formula {
+  font-size: 20px;
+  height: auto;
+  width: auto;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.c {
+  margin-bottom: 50px;
+}
+.formula {
+  margin-bottom: 10px;
+}
+.form h2, h5, .formula h3, p {
+  font-size: 15px;
+  color: #000333;
+  text-align: center;
+}
+.form {
+  height: auto;
+  width: auto;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 10px;
+  /*border: 1px solid lightGrey;*/
+}
+.form h2 {
+  font-size: 20px;
+}
+.calulator_input {
+  border-radius: 8px;
+  padding: 10px;
+  height: auto;
+  width: 300px;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+.calulator_input_disabled {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  height: auto;
+  width: 300px;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+select.calulator_input {
+  width: 322px;
+}
+.index_info {
+  color: #000333;
+  height: auto;
+  width: auto;
+  max-width: 950px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.index_info ul li {
+  margin-bottom: 10px;
+}
+.error {
+  color: red;
+  font-size: 15px;
+  margin-top: 5px;
+  width: 300px;
+  max-width: 500px;
+}
+.inputs {
+  height: auto;
+  width: 350px;
+  max-width: 500px;
+  margin: 0 auto;
+}
