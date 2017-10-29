@@ -2,12 +2,7 @@
 
 <script>
 
-import Header from './Header.vue';
-
 	export default {
-    components: {
-      headerFile: Header,
-    },
 		data: function() {
 			return {
 

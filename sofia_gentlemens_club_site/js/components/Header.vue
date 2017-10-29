@@ -10,7 +10,7 @@
 		},
     methods: {
       setActiveTab( tabID ) {
-        this.$store.state.activeTab = tabID;
+        this.$store.state.selectedTab = tabID;
       },
     },
 	}

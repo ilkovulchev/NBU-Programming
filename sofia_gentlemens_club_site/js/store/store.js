@@ -9,6 +9,7 @@ Vue.use(VueResource);
 export const store = new Vuex.Store({
 	state: {
     activeTab: 'home',
+    selectedTab: 'home',
   },
   getters: {
 
