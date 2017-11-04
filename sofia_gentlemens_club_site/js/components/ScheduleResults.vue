@@ -34,6 +34,7 @@
           this.scheduleObject.events['event_' + this.id]['match_info']['referees'][1] = '';
           this.scheduleObject.events['event_' + this.id]['match_info']['referees'][2] = '';
           this.scheduleObject.events['event_' + this.id]['match_info']['comisioner'] = '';
+          this.scheduleObject.events['event_' + this.id]['match_info']['stats'] = '';
 
           this.scheduleObject.events['event_' + this.id]['home_team'] = {};
           this.scheduleObject.events['event_' + this.id]['home_team']['name'] = '';
@@ -60,6 +61,8 @@
       this.scheduleObject.events['event_0']['away_team']['name'] = 'София Джентълмен\'с Клуб';
       this.scheduleObject.events['event_0']['away_team']['result'] = 50;
 
+      this.scheduleObject.events['event_0']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14715';
+
 
       this.scheduleObject.events['event_1']['match_info']['start_time'] = '09.10.2017 / 20:15';
       this.scheduleObject.events['event_1']['match_info']['referees'][0] = 'Татяна Йорданова Михайлова-Вълчева';
@@ -73,6 +76,8 @@
       this.scheduleObject.events['event_1']['away_team']['name'] = 'Перестройка Запад';
       this.scheduleObject.events['event_1']['away_team']['result'] = 55;
 
+      this.scheduleObject.events['event_1']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14724';
+
 
       this.scheduleObject.events['event_2']['match_info']['start_time'] = '21.10.2017 / 17:30';
       this.scheduleObject.events['event_2']['match_info']['referees'][0] = 'Орлин Мирчев Николов';
@@ -85,6 +90,7 @@
       this.scheduleObject.events['event_2']['away_team']['name'] = 'София Джентълмен\'с Клуб';
       this.scheduleObject.events['event_2']['away_team']['result'] = 61;
 
+      this.scheduleObject.events['event_2']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14770';
 
       this.scheduleObject.events['event_3']['match_info']['start_time'] = '26.10.2017 / 20:15';
       this.scheduleObject.events['event_3']['match_info']['referees'][0] = 'Иван Мирославов Маринов';
@@ -98,6 +104,7 @@
       this.scheduleObject.events['event_3']['away_team']['name'] = 'Шампион 2014';
       this.scheduleObject.events['event_3']['away_team']['result'] = 69;
 
+      this.scheduleObject.events['event_3']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14772';
 
       this.scheduleObject.events['event_4']['match_info']['start_time'] = '30.10.2017 / 20:15';
       this.scheduleObject.events['event_4']['match_info']['referees'][0] = 'Радослав Сийков Дяков';
@@ -106,11 +113,12 @@
       this.scheduleObject.events['event_4']['match_info']['comisioner'] = 'Александра Стефанова Минчева';
 
       this.scheduleObject.events['event_4']['home_team']['name'] = 'Монстарс';
-      this.scheduleObject.events['event_4']['home_team']['result'] = 0;
+      this.scheduleObject.events['event_4']['home_team']['result'] = 72;
 
       this.scheduleObject.events['event_4']['away_team']['name'] = 'София Джентълмен\'с Клуб';
-      this.scheduleObject.events['event_4']['away_team']['result'] = 0;
+      this.scheduleObject.events['event_4']['away_team']['result'] = 64;
 
+      this.scheduleObject.events['event_4']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14775';
 
       this.scheduleObject.events['event_5']['match_info']['start_time'] = '14.11.2017 / 22:00';
 
@@ -120,6 +128,7 @@
       this.scheduleObject.events['event_5']['away_team']['name'] = 'Миньор 2015';
       this.scheduleObject.events['event_5']['away_team']['result'] = 0;
 
+      this.scheduleObject.events['event_5']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14783';
 
       this.scheduleObject.events['event_6']['match_info']['start_time'] = '23.11.2017 / 22:00';
 
@@ -129,6 +138,7 @@
       this.scheduleObject.events['event_6']['away_team']['name'] = 'София Джентълмен\'с Клуб';
       this.scheduleObject.events['event_6']['away_team']['result'] = 0;
 
+      this.scheduleObject.events['event_6']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14789';
 
       this.scheduleObject.events['event_7']['match_info']['start_time'] = '01.12.2017 / 20:15';
 
@@ -137,6 +147,9 @@
 
       this.scheduleObject.events['event_7']['away_team']['name'] = 'Инпулс';
       this.scheduleObject.events['event_7']['away_team']['result'] = 0;
+
+      this.scheduleObject.events['event_7']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14793';
+
     },
 	}
 </script>

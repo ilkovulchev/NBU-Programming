@@ -15,7 +15,7 @@ A {
 }
 
 .sgc_site_wrapper {
-  height: 100%;
+  /*height: 100%;*/
   width: 80%;
   margin: 0 auto;
   /*background-color: white;*/
@@ -24,7 +24,7 @@ A {
 }
 
 .sgc_home {
-  height: 100%
+  /*height: 100%*/
 }
 
 /*Header styles*/
@@ -102,6 +102,11 @@ A.sgc_navbar_item.sgc_active:hover {
   text-align: center;
 }
 
+.sgc_last_match {
+  margin-top: 10px;
+  border-bottom: 1px solid black;
+}
+
 .sgc_last_match_details > div {
   margin-bottom: 5px;
 }
@@ -136,4 +141,60 @@ A.sgc_navbar_item.sgc_active:hover {
 .sgc_last_match_dash,
 .sgc_last_match_away_team_result {
   float: left;
+}
+
+/*Roster styles*/
+
+.sgc_roster_position_container {
+  position: relative;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.sgc_roster_position_header {
+  font-size: 20px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  font-weight: bold;
+}
+
+.sgc_pg_position,
+.sgc_sg_position,
+.sgc_sf_position,
+.sgc_pf_position,
+.sgc_c_position {
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  width: 16%;
+}
+
+.sgc_player_icon {
+  height: 60px;
+  width: 60px;
+  background-size: 60px;
+  position: relative;
+  background-image: url('./../img/roster_player_icon.png');
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.sgc_player_icon span {
+  color: #ffffff;
+  position: relative;
+  top: 40px;
+}
+
+.sgc_roster_player_name,
+.sgc_roster_player_number,
+.sgc_roster_player_height {
+  margin: 0 5px;
+}
+
+.sgc_roster_player_stats {
+  text-align: center;
 }

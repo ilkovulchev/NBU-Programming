@@ -1,0 +1,118 @@
+<div class="sgc_roster">
+  <section class="sgc_roster_position_container" v-for="(player, value) in rosterGrouped">
+
+    <div class="sgc_roster_position_header">
+      <span v-if="value == 'pg' ">Point Guards</span>
+      <span v-if="value == 'sg' ">Shooting Guards</span>
+      <span v-if="value == 'sf' ">Small Forwards</span>
+      <span v-if="value == 'pf' ">Power Forwards </span>
+      <span v-if="value == 'c' ">Centers</span>
+    </div>
+
+    <div class="sgc_pg_position" v-for="players in player" v-if="value == 'pg' ">
+
+      <div class="sgc_player_icon"><span>{{ players.number }}</span></div>
+      <div class="sgc_roster_player_name">
+        <span>Име:</span>
+        <span>{{ players.name }}</span>
+      </div>
+      <div class="sgc_roster_player_number">
+        <span>Номер:</span>
+        <span>{{ players.number }}</span>
+      </div>
+      <div class="sgc_roster_player_height">
+        <span>Височина:</span>
+        <span>{{ players.height }}</span>
+      </div>
+      <div class="sgc_roster_player_stats">
+        <a :href="players.stats" target="_blank">Статистика</a>
+      </div>
+
+    </div>
+
+    <div class="sgc_sg_position" v-for="players in player" v-if="value == 'sg' ">
+
+      <div class="sgc_player_icon"><span>{{ players.number }}</span></div>
+      <div class="sgc_roster_player_name">
+        <span>Име:</span>
+        <span>{{ players.name }}</span>
+      </div>
+      <div class="sgc_roster_player_number">
+        <span>Номер:</span>
+        <span>{{ players.number }}</span>
+      </div>
+      <div class="sgc_roster_player_height">
+        <span>Височина:</span>
+        <span>{{ players.height }}</span>
+      </div>
+      <div class="sgc_roster_player_stats">
+        <a :href="players.stats" target="_blank">Статистика</a>
+      </div>
+
+    </div>
+
+    <div class="sgc_sf_position" v-for="players in player" v-if="value == 'sf' ">
+
+      <div class="sgc_player_icon"><span>{{ players.number }}</span></div>
+      <div class="sgc_roster_player_name">
+        <span>Име:</span>
+        <span>{{ players.name }}</span>
+      </div>
+      <div class="sgc_roster_player_number">
+        <span>Номер:</span>
+        <span>{{ players.number }}</span>
+      </div>
+      <div class="sgc_roster_player_height">
+        <span>Височина:</span>
+        <span>{{ players.height }}</span>
+      </div>
+      <div class="sgc_roster_player_stats">
+        <a :href="players.stats" target="_blank">Статистика</a>
+      </div>
+
+    </div>
+
+    <div class="sgc_pf_position" v-for="players in player" v-if="value == 'pf' ">
+
+      <div class="sgc_player_icon"><span>{{ players.number }}</span></div>
+      <div class="sgc_roster_player_name">
+        <span>Име:</span>
+        <span>{{ players.name }}</span>
+      </div>
+      <div class="sgc_roster_player_number">
+        <span>Номер:</span>
+        <span>{{ players.number }}</span>
+      </div>
+      <div class="sgc_roster_player_height">
+        <span>Височина:</span>
+        <span>{{ players.height }}</span>
+      </div>
+      <div class="sgc_roster_player_stats">
+        <a :href="players.stats" target="_blank">Статистика</a>
+      </div>
+
+    </div>
+
+    <div class="sgc_c_position" v-for="players in player" v-if="value == 'c' ">
+
+      <div class="sgc_player_icon"><span>{{ players.number }}</span></div>
+      <div class="sgc_roster_player_name">
+        <span>Име:</span>
+        <span>{{ players.name }}</span>
+      </div>
+      <div class="sgc_roster_player_number">
+        <span>Номер:</span>
+        <span>{{ players.number }}</span>
+      </div>
+      <div class="sgc_roster_player_height">
+        <span>Височина:</span>
+        <span>{{ players.height }}</span>
+      </div>
+      <div class="sgc_roster_player_stats">
+        <a :href="players.stats" target="_blank">Статистика</a>
+      </div>
+
+    </div>
+
+  </section>
+</div>

@@ -21,13 +21,16 @@
       </div>
 
       <div class="sgc_last_match_event">
+
         <div class="sgc_last_match_home_team"><span class="sgc_last_match_home_team_name">{{event.home_team.name}}</span></div>
 
-        <div class="sgc_last_match_result">
-          <div class="sgc_last_match_home_team_result"><span>{{event.home_team.result}}</span></div>
-          <div class="sgc_last_match_dash">&nbsp;-&nbsp;</div>
-          <div class="sgc_last_match_away_team_result"><span>{{event.away_team.result}}</span></div>
-        </div>
+        <a :href="event.match_info.stats" target="_blank">
+          <div class="sgc_last_match_result">
+            <div class="sgc_last_match_home_team_result"><span>{{event.home_team.result}}</span></div>
+            <div class="sgc_last_match_dash">&nbsp;-&nbsp;</div>
+            <div class="sgc_last_match_away_team_result"><span>{{event.away_team.result}}</span></div>
+          </div>
+        </a>
 
         <div class="sgc_last_match_away_team"><span class="sgc_last_match_away_team_name">{{event.away_team.name}}</span></div>
       </div>

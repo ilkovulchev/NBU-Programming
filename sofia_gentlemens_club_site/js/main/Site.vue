@@ -13,6 +13,7 @@
 
   import Header from './../components/Header.vue';
 	import Home from './../components/Home.vue';
+  import Roster from './../components/Roster.vue';
   import ScheduleResults from './../components/ScheduleResults.vue';
 
 
@@ -20,6 +21,7 @@
 		components: {
       headerFile: Header,
 			home: Home,
+      roster: Roster,
       scheduleResults: ScheduleResults,
 		},
 		data: function() {
