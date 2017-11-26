@@ -134,7 +134,7 @@ A.sgc_navbar_item.sgc_active:hover {
 .sgc_last_match_result {
   float: left;
   margin: 0 20px;
-  width: 50px;
+  max-width: 62px;
 }
 
 .sgc_last_match_home_team_result,
@@ -197,4 +197,31 @@ A.sgc_navbar_item.sgc_active:hover {
 
 .sgc_roster_player_stats {
   text-align: center;
+}
+
+/*Gallery Styles*/
+
+.sgc_gallery {
+  text-align: center;
+  padding: 20px;
+}
+
+.sgc_gallery_image {
+  display: inline-block;
+  height: 134px;
+  width: 200px;
+  margin-right: 45px;
+  margin-bottom: 20px;
+  border: 1px solid #000000;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: 200px;
+}
+
+.sgc_gallery_image:nth-child(4n + 4) {
+  margin-right: 0;
+}
+
+.sgc_gallery_image:hover {
+  transform: scale(1.5);
 }

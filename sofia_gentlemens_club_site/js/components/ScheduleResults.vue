@@ -121,22 +121,30 @@
       this.scheduleObject.events['event_4']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14775';
 
       this.scheduleObject.events['event_5']['match_info']['start_time'] = '14.11.2017 / 22:00';
+			this.scheduleObject.events['event_5']['match_info']['referees'][0] = 'Зоя Методиева Станоева';
+      this.scheduleObject.events['event_5']['match_info']['referees'][1] = 'Тихомир Райков Щерев';
+      this.scheduleObject.events['event_5']['match_info']['referees'][2] = 'Валентин Димитров Въчковски';
+      this.scheduleObject.events['event_5']['match_info']['comisioner'] = 'Мария Кирилова Цветкова';
 
       this.scheduleObject.events['event_5']['home_team']['name'] = 'София Джентълмен\'с Клуб';
-      this.scheduleObject.events['event_5']['home_team']['result'] = 0;
+      this.scheduleObject.events['event_5']['home_team']['result'] = 52;
 
       this.scheduleObject.events['event_5']['away_team']['name'] = 'Миньор 2015';
-      this.scheduleObject.events['event_5']['away_team']['result'] = 0;
+      this.scheduleObject.events['event_5']['away_team']['result'] = 102;
 
       this.scheduleObject.events['event_5']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14783';
 
       this.scheduleObject.events['event_6']['match_info']['start_time'] = '23.11.2017 / 22:00';
+			this.scheduleObject.events['event_6']['match_info']['referees'][0] = 'Георги Венелинов Брестнички';
+      this.scheduleObject.events['event_6']['match_info']['referees'][1] = 'Иван Любомиров Методиев';
+      this.scheduleObject.events['event_6']['match_info']['referees'][2] = 'Чавдар Емилов Зехиров';
+      this.scheduleObject.events['event_6']['match_info']['comisioner'] = 'Румяна Павлова';
 
       this.scheduleObject.events['event_6']['home_team']['name'] = 'Политехника';
-      this.scheduleObject.events['event_6']['home_team']['result'] = 0;
+      this.scheduleObject.events['event_6']['home_team']['result'] = 85;
 
       this.scheduleObject.events['event_6']['away_team']['name'] = 'София Джентълмен\'с Клуб';
-      this.scheduleObject.events['event_6']['away_team']['result'] = 0;
+      this.scheduleObject.events['event_6']['away_team']['result'] = 42;
 
       this.scheduleObject.events['event_6']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14789';
 

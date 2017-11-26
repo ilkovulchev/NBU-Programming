@@ -10,6 +10,7 @@ export const store = new Vuex.Store({
 	state: {
     activeTab: 'home',
     selectedTab: 'home',
+		// closeOpenedImage: false,
   },
   getters: {
 
