@@ -149,12 +149,16 @@
       this.scheduleObject.events['event_6']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14789';
 
       this.scheduleObject.events['event_7']['match_info']['start_time'] = '01.12.2017 / 20:15';
+			this.scheduleObject.events['event_7']['match_info']['referees'][0] = 'Божидар Севдалинов Йорданов';
+      this.scheduleObject.events['event_7']['match_info']['referees'][1] = 'Недко Николаев Колев';
+      this.scheduleObject.events['event_7']['match_info']['referees'][2] = 'Константин Русев Русев';
+      this.scheduleObject.events['event_7']['match_info']['comisioner'] = 'Румяна Павлова';
 
       this.scheduleObject.events['event_7']['home_team']['name'] = 'София Джентълмен\'с Клуб';
-      this.scheduleObject.events['event_7']['home_team']['result'] = 0;
+      this.scheduleObject.events['event_7']['home_team']['result'] = 44;
 
       this.scheduleObject.events['event_7']['away_team']['name'] = 'Инпулс';
-      this.scheduleObject.events['event_7']['away_team']['result'] = 0;
+      this.scheduleObject.events['event_7']['away_team']['result'] = 68;
 
       this.scheduleObject.events['event_7']['match_info']['stats'] = 'http://nbla.basketball.bg/boxscore.php?id=14793';
 
