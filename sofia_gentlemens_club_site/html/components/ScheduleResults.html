@@ -3,19 +3,19 @@
     <div class="sgc_last_match">
 
       <div class="sgc_last_match_details">
-        <div class="sgc_last_match_date"><span>{{event.match_info.start_time}}</span></div>
-        <div class="sgc_las_match_venue"><span>{{event.match_info.venue}}</span></div>
+        <div class="sgc_last_match_date"><span itemprop="startTime">{{event.match_info.start_time}}</span></div>
+        <div class="sgc_las_match_venue"><span itemprop="venueName">{{event.match_info.venue}}</span></div>
 
         <div class="sgc_last_match_referees">
           <span>Съдии :</span>
-          <div class="sgc_last_match_referee_name"><span>{{event.match_info.referees[0]}}</span></div>
-          <div class="sgc_last_match_referee_name"><span>{{event.match_info.referees[1]}}</span></div>
-          <div class="sgc_last_match_referee_name"><span>{{event.match_info.referees[2]}}</span></div>
+          <div class="sgc_last_match_referee_name"><span itemprop="officialName">{{event.match_info.referees[0]}}</span></div>
+          <div class="sgc_last_match_referee_name"><span itemprop="officialName">{{event.match_info.referees[1]}}</span></div>
+          <div class="sgc_last_match_referee_name"><span itemprop="officialName">{{event.match_info.referees[2]}}</span></div>
         </div>
 
         <div class="sgc_last_match_comisioner">
           <div>Комисар :</div>
-          <span>{{event.match_info.comisioner}}</span>
+          <span itemprop="commisionerName">{{event.match_info.comisioner}}</span>
         </div>
 
       </div>
@@ -24,17 +24,17 @@
 
         <div class="sgc_last_match_event_text">Резултат :</div>
 
-        <div class="sgc_last_match_home_team"><span class="sgc_last_match_home_team_name">{{event.home_team.name}}</span></div>
+        <div class="sgc_last_match_home_team"><span class="sgc_last_match_home_team_name" itemprop="teamName">{{event.home_team.name}}</span></div>
 
-        <a :href="event.match_info.stats" target="_blank">
+        <a :href="event.match_info.stats" target="_blank" title="BGO Software League match statistics">
           <div class="sgc_last_match_result">
-            <div class="sgc_last_match_home_team_result"><span>{{event.home_team.result}}</span></div>
+            <div class="sgc_last_match_home_team_result"><span itemprop="teamScore">{{event.home_team.result}}</span></div>
             <div class="sgc_last_match_dash">&nbsp;-&nbsp;</div>
-            <div class="sgc_last_match_away_team_result"><span>{{event.away_team.result}}</span></div>
+            <div class="sgc_last_match_away_team_result"><span itemprop="teamScore">{{event.away_team.result}}</span></div>
           </div>
         </a>
 
-        <div class="sgc_last_match_away_team"><span class="sgc_last_match_away_team_name">{{event.away_team.name}}</span></div>
+        <div class="sgc_last_match_away_team"><span class="sgc_last_match_away_team_name" itemprop="teamName">{{event.away_team.name}}</span></div>
       </div>
 
     </div>

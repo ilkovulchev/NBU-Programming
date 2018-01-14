@@ -20,6 +20,7 @@ A {
 
 .sgc_site_wrapper {
   width: 80%;
+  min-width: 700px;
   margin: 0 auto;
   background-color: #FFFFFF;
   border-radius: 10px;
@@ -69,7 +70,9 @@ A {
 
 .sgc_banner_text {
   margin-top: 40px;
-  /*border: 1px solid black;*/
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 50px;
 }
 
@@ -395,4 +398,52 @@ A.sgc_navbar_item.sgc_active:hover {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+@media screen and (max-width: 1293px) {
+    A.sgc_navbar_item {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1234px) {
+  .sgc_gallery_image:nth-child(4n + 4) {
+       margin-right: 45px; 
+  }
+}
+
+@media screen and (max-width: 1193px) {
+  .sgc_navbar {
+    width: auto;
+    left: 130px;
+  }
+
+  A.sgc_navbar_item {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 949px) {
+  .sgc_navbar {
+    width: auto;
+    left: 70px;
+  }
+}
+
+@media screen and (max-width: 829px) {
+  .sgc_navbar {
+    width: auto;
+    left: 50px;
+  }
+
+  A.sgc_navbar_item {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 734px) {
+  A.sgc_navbar_item {
+    width: 100px;
+  }
 }

@@ -1,6 +1,6 @@
 <div class="sgc_home">
   <section>
-    <div class="sgc_last_match_container">
+    <div class="sgc_last_match_container" itemprop="matchData">
       <div class="sgc_last_match_header">
         <span class="sgc_last_match_header_text">Предишен мач</span>
       </div>
@@ -8,14 +8,14 @@
       <div class="sgc_last_match_home">
 
         <div class="sgc_last_match_details">
-          <div class="sgc_last_match_date"><span>01.12.2017 / 20:15</span></div>
-          <div class="sgc_las_match_venue"><span>зала Триадица</span></div>
+          <div class="sgc_last_match_date"><span itemprop="startTime">01.12.2017 / 20:15</span></div>
+          <div class="sgc_las_match_venue"><span itemprop="hallName">зала Триадица</span></div>
 
           <div class="sgc_last_match_referees">
             <span>Съдии :</span>
-            <div class="sgc_last_match_referee_name"><span>Божидар Севдалинов Йорданов</span></div>
-            <div class="sgc_last_match_referee_name"><span>Недко Николаев Колев</span></div>
-            <div class="sgc_last_match_referee_name"><span>Константин Русев Русев</span></div>
+            <div class="sgc_last_match_referee_name"><span itemprop="officialName">Божидар Севдалинов Йорданов</span></div>
+            <div class="sgc_last_match_referee_name"><span itemprop="officialName">Недко Николаев Колев</span></div>
+            <div class="sgc_last_match_referee_name"><span itemprop="officialName">Константин Русев Русев</span></div>
           </div>
 
           <div class="sgc_last_match_comisioner">
@@ -29,26 +29,26 @@
 
           <div class="sgc_last_match_event_text">Резултат :</div>
 
-          <div class="sgc_last_match_home_team"><span class="sgc_last_match_home_team_name">София Джентълмен'с Клуб</span></div>
+          <div class="sgc_last_match_home_team"><span class="sgc_last_match_home_team_name" itemprop="teamName">София Джентълмен'с Клуб</span></div>
 
-          <a href="http://nbla.basketball.bg/boxscore.php?id=14793" target="_blank">
+          <a href="http://nbla.basketball.bg/boxscore.php?id=14793" target="_blank" title="BGO Software League match statistics">
 
             <div class="sgc_last_match_result">
-              <div class="sgc_last_match_home_team_result"><span>44</span></div>
+              <div class="sgc_last_match_home_team_result"><span itemprop="teamScore">44</span></div>
               <div class="sgc_last_match_dash">&nbsp;-&nbsp;</div>
-              <div class="sgc_last_match_away_team_result"><span>68</span></div>
+              <div class="sgc_last_match_away_team_result"><span itemprop="teamScore">68</span></div>
             </div>
 
           </a>
 
 
-          <div class="sgc_last_match_away_team"><span class="sgc_last_match_away_team_name">Инпулс</span></div>
+          <div class="sgc_last_match_away_team"><span class="sgc_last_match_away_team_name" itemprop="teamName">Инпулс</span></div>
         </div>
 
       </div>
     </div>
 
-    <div class="sgc_last_match_container">
+    <div class="sgc_last_match_container" itemprop="matchData">
       <div class="sgc_last_match_header">
         <span class="sgc_last_match_header_text">Предстоящ мач</span>
       </div>
@@ -56,8 +56,8 @@
       <div class="sgc_last_match_home">
 
         <div class="sgc_last_match_details">
-          <div class="sgc_last_match_date"><span>08.01.2018 / 21:50</span></div>
-          <div class="sgc_las_match_venue"><span>зала Триадица</span></div>
+          <div class="sgc_last_match_date"><span itemprop="startTime">08.01.2018 / 21:50</span></div>
+          <div class="sgc_las_match_venue"><span itemprop="hallName">зала Триадица</span></div>
 
             <!-- <div class="sgc_last_match_referees">
             <span>Съдии :</span>
@@ -77,7 +77,7 @@
 
         <div class="sgc_last_match_event_text">Резултат :</div>
 
-        <div class="sgc_last_match_home_team"><span class="sgc_last_match_home_team_name">София Джентълмен'с Клуб</span></div>
+        <div class="sgc_last_match_home_team"><span class="sgc_last_match_home_team_name" itemprop="teamName">София Джентълмен'с Клуб</span></div>
 
         <div class="sgc_last_match_result">
           <div class="sgc_last_match_home_team_result"><span></span></div>
@@ -85,12 +85,12 @@
           <div class="sgc_last_match_away_team_result"><span></span></div>
         </div>
 
-        <div class="sgc_last_match_away_team"><span class="sgc_last_match_away_team_name">БГО Софтуер Булс</span></div>
+        <div class="sgc_last_match_away_team"><span class="sgc_last_match_away_team_name" itemprop="teamName">БГО Софтуер Булс</span></div>
       </div>
     </div>
   </div>
   </section>
-  <section class="slideshow_section">
+  <section class="slideshow_section" itemprop="slideShow">
         <!-- Slideshow container -->
     <div class="slideshow-container">
 
@@ -114,8 +114,8 @@
       </div>
 
       <!-- Next and previous buttons -->
-      <a class="prev" @click="plusSlides(-1)">&#10094;</a>
-      <a class="next" @click="plusSlides(1)">&#10095;</a>
+      <a class="prev" itemprop="url" @click="plusSlides(-1)" title="slideshow - previous image">&#10094;</a>
+      <a class="next" itemprop="url" @click="plusSlides(1)" title="slideshow - next image">&#10095;</a>
     </div>
     <br>
 

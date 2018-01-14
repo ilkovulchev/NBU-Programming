@@ -23,15 +23,10 @@ module.exports = {
 				test: /\.html$/,
 				loader: 'html-loader'
 			},
-			// {
-			// 	test: /\.(png|jpg|gif|svg)$/,
-			// 	use: [
-      //     {
-      //       loader: 'file-loader',
-      //       options: {}
-      //     }
-      //   ]
-			// }
+			{
+				test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader?name=img/[name].[ext]?[hash]',
+			}
 		]
 	},
   plugins: [

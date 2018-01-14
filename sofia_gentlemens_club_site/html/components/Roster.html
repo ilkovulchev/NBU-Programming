@@ -2,11 +2,11 @@
   <section class="sgc_roster_position_container" v-for="(player, value) in rosterGrouped">
 
     <div class="sgc_roster_position_header">
-      <span v-if="value == 'pg' ">Point Guards</span>
-      <span v-if="value == 'sg' ">Shooting Guards</span>
-      <span v-if="value == 'sf' ">Small Forwards</span>
-      <span v-if="value == 'pf' ">Power Forwards </span>
-      <span v-if="value == 'c' ">Centers</span>
+      <span v-if="value == 'pg' " itemprop="playerPosition">Point Guards</span>
+      <span v-if="value == 'sg' " itemprop="playerPosition">Shooting Guards</span>
+      <span v-if="value == 'sf' " itemprop="playerPosition">Small Forwards</span>
+      <span v-if="value == 'pf' " itemprop="playerPosition">Power Forwards </span>
+      <span v-if="value == 'c' " itemprop="playerPosition">Centers</span>
     </div>
 
     <div class="sgc_pg_position" v-for="players in player" v-if="value == 'pg' ">
@@ -14,18 +14,18 @@
       <div class="sgc_player_icon"><span>{{ players.number }}</span></div>
       <div class="sgc_roster_player_name">
         <span>Име:</span>
-        <span>{{ players.name }}</span>
+        <span itemprop="playerName">{{ players.name }}</span>
       </div>
       <div class="sgc_roster_player_number">
         <span>Номер:</span>
-        <span>{{ players.number }}</span>
+        <span itemprop="playerNumber">{{ players.number }}</span>
       </div>
       <div class="sgc_roster_player_height">
         <span>Височина:</span>
-        <span>{{ players.height }}</span>
+        <span itemprop="playerHeight">{{ players.height }}</span>
       </div>
       <div class="sgc_roster_player_stats">
-        <a :href="players.stats" target="_blank">Статистика</a>
+        <a :href="players.stats" target="_blank" itemprop="url" title="BGO Software League player statistics">Статистика</a>
       </div>
 
     </div>
@@ -35,18 +35,18 @@
       <div class="sgc_player_icon"><span>{{ players.number }}</span></div>
       <div class="sgc_roster_player_name">
         <span>Име:</span>
-        <span>{{ players.name }}</span>
+        <span itemprop="playerName">{{ players.name }}</span>
       </div>
       <div class="sgc_roster_player_number">
         <span>Номер:</span>
-        <span>{{ players.number }}</span>
+        <span itemprop="playerNumber">{{ players.number }}</span>
       </div>
       <div class="sgc_roster_player_height">
         <span>Височина:</span>
-        <span>{{ players.height }}</span>
+        <span itemprop="playerHeight">{{ players.height }}</span>
       </div>
       <div class="sgc_roster_player_stats">
-        <a :href="players.stats" target="_blank">Статистика</a>
+        <a :href="players.stats" target="_blank" itemprop="url" title="BGO Software League player statistics">Статистика</a>
       </div>
 
     </div>
@@ -56,18 +56,18 @@
       <div class="sgc_player_icon"><span>{{ players.number }}</span></div>
       <div class="sgc_roster_player_name">
         <span>Име:</span>
-        <span>{{ players.name }}</span>
+        <span itemprop="playerName">{{ players.name }}</span>
       </div>
       <div class="sgc_roster_player_number">
         <span>Номер:</span>
-        <span>{{ players.number }}</span>
+        <span itemprop="playerNumber">{{ players.number }}</span>
       </div>
       <div class="sgc_roster_player_height">
         <span>Височина:</span>
-        <span>{{ players.height }}</span>
+        <span itemprop="playerHeight">{{ players.height }}</span>
       </div>
       <div class="sgc_roster_player_stats">
-        <a :href="players.stats" target="_blank">Статистика</a>
+        <a :href="players.stats" target="_blank" itemprop="url" title="BGO Software League player statistics">Статистика</a>
       </div>
 
     </div>
@@ -77,18 +77,18 @@
       <div class="sgc_player_icon"><span>{{ players.number }}</span></div>
       <div class="sgc_roster_player_name">
         <span>Име:</span>
-        <span>{{ players.name }}</span>
+        <span itemprop="playerName">{{ players.name }}</span>
       </div>
       <div class="sgc_roster_player_number">
         <span>Номер:</span>
-        <span>{{ players.number }}</span>
+        <span itemprop="playerNumber">{{ players.number }}</span>
       </div>
       <div class="sgc_roster_player_height">
         <span>Височина:</span>
-        <span>{{ players.height }}</span>
+        <span itemprop="playerHeight">{{ players.height }}</span>
       </div>
       <div class="sgc_roster_player_stats">
-        <a :href="players.stats" target="_blank">Статистика</a>
+        <a :href="players.stats" target="_blank" itemprop="url" title="BGO Software League player statistics">Статистика</a>
       </div>
 
     </div>
@@ -98,18 +98,18 @@
       <div class="sgc_player_icon"><span>{{ players.number }}</span></div>
       <div class="sgc_roster_player_name">
         <span>Име:</span>
-        <span>{{ players.name }}</span>
+        <span itemprop="playerName">{{ players.name }}</span>
       </div>
       <div class="sgc_roster_player_number">
         <span>Номер:</span>
-        <span>{{ players.number }}</span>
+        <span itemprop="playerNumber">{{ players.number }}</span>
       </div>
       <div class="sgc_roster_player_height">
         <span>Височина:</span>
-        <span>{{ players.height }}</span>
+        <span itemprop="playerHeight">{{ players.height }}</span>
       </div>
       <div class="sgc_roster_player_stats">
-        <a :href="players.stats" target="_blank">Статистика</a>
+        <a :href="players.stats" target="_blank" itemprop="url" title="BGO Software League player statistics">Статистика</a>
       </div>
 
     </div>
