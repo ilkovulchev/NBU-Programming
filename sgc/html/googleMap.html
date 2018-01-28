@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Interested in basketball? Check out Sofia Getnlemen's Basketball Club official website to check the teams upcoming matches and results, event statistics, player statistics and more.">
+    <meta name="keywords" content="Basketball, Sofia, Gentleman, Gentlemen's, Sofia Gentlemen's Club, Sports, Team, Website, Matches, Results, Statistics">
+    <meta name="author" content="Ilko Valchev">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:type"                              content="business.business" />
+    <meta property="og:url"                               content="http://sofiagentlemensclub.atwebpages.com" />
+    <meta property="og:title"                             content="Sofia Gentlemen's Basketball Club" />
+    <meta property="og:image"                             content="http://sofiagentlemensclub.atwebpages.com/img/team_logo.png" />
+    <meta property="business:contact_data:street_address" content="София, бул. Цариградско шосе 115Г, 1784 Poligona, Sofia" />
+    <meta property="business:contact_data:locality"       content="Sofia" />
+    <meta property="business:contact_data:postal_code"    content="1784" />
+    <meta property="business:contact_data:country_name"   content="Bulgaria" />
+    <meta property="place:location:latitude"              content="42.661580" />
+    <meta property="place:location:longitude"             content="23.379836" />
+
+    <title>Sofia Gentlemen's Basketball Club official site - Home Page</title>
+    <link rel="stylesheet" href="./../css/site.css">
+    <link rel="shortcut icon" href="./../img/site_icon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
+    <script src="./../js/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+
+    <div class="sgc_site">
+
+      <div class="sgc_site_wrapper">
+
+        <div class="sgc_header">
+          <a href="./../home.html" class="sgc_logo_container">
+            <img src="./../img/team_logo.png" alt="Sofia Gentlemen's Club Team Logo" style="width: 150px; height: 75%" class="sgc_logo">
+          </a>
+          <div class="sgc_banner">
+            <a href="./../home.html" title="Sofia Gentlemen's Club banner">
+              <h1 class="sgc_banner_text">Sofia Gentlemen's Basketball Club</h1>
+            </a>
+          </div>
+          <nav class="sgc_navbar">
+            <a id="home" class="sgc_navbar_item" href="./../home.html" title="HOME - Sofia Gentlemen's Club">Начало</a>
+            <a id="schedule" class="sgc_navbar_item" href="./schedule.html" title="SCHEDULE AND RESULTS- Sofia Gentlemen's Club">Програма</a>
+            <a id="roster" class="sgc_navbar_item" href="./roster.html" title="ROSTER - Sofia Gentlemen's Club">Състав</a>
+            <a id="gallery" class="sgc_navbar_item" href="./gallery.html" title="GALLERY - Sofia Gentlemen's Club">Галерия</a>
+            <a id="location" class="sgc_navbar_item sgc_active" href="./googleMap.html" title="Location - Sofia Gentlemen's Club">Локация</a>
+          </nav>
+        </div>
+
+        <div id="map"></div>
+
+      </div>
+    </div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 42.661580, lng: 23.379836};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtMvzK54jo6uVliaUcAfKmeO4KF5o_Ay8&callback=initMap">
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "SportsTeam",
+      "name": "Sofia Gentlemen's Club",
+      "sport": "Basketball",
+      "memberOf": [
+        {
+          "@type": "SportsOrganization",
+          "name": "BGO Software League"
+        },{
+          "@type": "SportsOrganization",
+          "name": "Region West"
+        },{
+          "@type": "SportsOrganization",
+          "name": "Region West Group B"
+        }
+      ],
+      "coach": {
+        "@type": "Person",
+        "name": "Ilko Valchev"
+      },
+      "athlete": [
+        {
+          "@type": "Person",
+          "name": "Ilko Valchev"
+        },{
+          "@type": "Person",
+          "name": "Miroslav Ketenliev"
+        }
+      ]
+    }
+    </script>
+  </body>
+</html>
