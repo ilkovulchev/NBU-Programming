@@ -1,9 +1,3 @@
-$(document).ready(function () {
-  var url = window.location.pathname.split("/");
-  console.log('ready', url);
-});
-
-
 var slideIndex = 1;
 showSlides(slideIndex);
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# business: http://ogp.me/ns/business#">
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="description" content="Interested in basketball? Check out Sofia Getnlemen's Basketball Club official website to check the teams upcoming matches and results, event statistics, player statistics and more.">
     <meta name="keywords" content="Basketball, Sofia, Gentleman, Gentlemen's, Sofia Gentlemen's Club, Sports, Team, Website, Matches, Results, Statistics">
     <meta name="author" content="Ilko Valchev">
@@ -10,7 +10,7 @@
     <meta property="og:type"                              content="business.business" />
     <meta property="og:url"                               content="http://sofiagentlemensclub.atwebpages.com" />
     <meta property="og:title"                             content="Sofia Gentlemen's Basketball Club" />
-    <meta property="og:image"                             content="http://sofiagentlemensclub.atwebpages.com/img/team_logo.png" />
+    <meta property="og:image"                             content="http://sofiagentlemensclub.atwebpages.com/img/team_logo1.png" />
     <meta property="business:contact_data:street_address" content="София, бул. Цариградско шосе 115Г, 1784 Poligona, Sofia" />
     <meta property="business:contact_data:locality"       content="Sofia" />
     <meta property="business:contact_data:postal_code"    content="1784" />
@@ -22,7 +22,17 @@
     <link rel="stylesheet" href="./css/site.css">
     <link rel="shortcut icon" href="./img/site_icon.ico">
     <link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
-    <script src="./js/jquery-3.3.1.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112469126-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-112469126-1');
+    </script>
+
   </head>
   <body>
 
@@ -32,7 +42,7 @@
 
         <div class="sgc_header">
           <a href="./home.html" class="sgc_logo_container">
-            <img src="./img/team_logo.png" alt="Sofia Gentlemen's Club Team Logo" style="width: 150px; height: 75%" class="sgc_logo">
+            <img src="./img/team_logo1.png" alt="Sofia Gentlemen's Club Team Logo" style="width: 150px; height: 75%" class="sgc_logo">
           </a>
           <div class="sgc_banner">
             <a href="./home.html" title="Sofia Gentlemen's Club banner">
@@ -185,7 +195,36 @@
         </div>
     </div>
 
-    <script src="./js/home.js"></script>
+    <script type="text/javascript">
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+      }
+    </script>
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
